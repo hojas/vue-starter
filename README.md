@@ -8,3 +8,15 @@
 - MDX
 - vite
 - sass
+
+## Install
+
+```text
+$ pnpm install
+```
+
+## Development
+
+```text
+$ pnpm dev
+```
