@@ -12,6 +12,7 @@
 ## Install
 
 ```text
+$ corepack enable
 $ pnpm install
 ```
 
@@ -19,4 +20,10 @@ $ pnpm install
 
 ```text
 $ pnpm dev
+```
+
+## Build
+
+```text
+$ pnpm build
 ```
