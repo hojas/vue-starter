@@ -1,4 +1,4 @@
-FROM node:20.17.0-alpine AS builder
+FROM node:24.14.0-alpine AS builder
 
 WORKDIR /opt/app
 COPY package.json pnpm-lock.yaml /opt/app/
@@ -8,7 +8,7 @@ COPY . .
 RUN pnpm build
 
 
-FROM nginx:1.27.1-alpine
+FROM nginx:1.29.5-alpine
 
 WORKDIR /usr/share/nginx/html
 COPY --from=builder /opt/app/dist .
