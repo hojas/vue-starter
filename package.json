@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "type-check": "vue-tsc -b"
+    "type-check": "vue-tsc -b",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "pinia": "^3.0.4",
