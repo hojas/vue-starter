@@ -14,7 +14,7 @@
 const API_CONFIG = {
   baseUrl: import.meta.env.VITE_API_BASE_URL,
   timeout: 10000,
-};
+}
 
-export default API_CONFIG;
+export default API_CONFIG
 ```

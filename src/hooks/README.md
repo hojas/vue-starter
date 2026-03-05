@@ -11,28 +11,30 @@
 
 ```typescript
 // useApi.ts
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 export function useApi() {
-  const loading = ref(false);
-  const error = ref(null);
+  const loading = ref(false)
+  const error = ref(null)
 
   const fetchData = async (url: string) => {
-    loading.value = true;
-    error.value = null;
-    
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      error.value = err;
-      return null;
-    } finally {
-      loading.value = false;
-    }
-  };
+    loading.value = true
+    error.value = null
 
-  return { loading, error, fetchData };
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      return data
+    }
+    catch (err) {
+      error.value = err
+      return null
+    }
+    finally {
+      loading.value = false
+    }
+  }
+
+  return { loading, error, fetchData }
 }
 ```

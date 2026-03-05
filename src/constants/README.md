@@ -15,7 +15,7 @@ export const API_ENDPOINTS = {
   USER: '/api/user',
   PRODUCT: '/api/product',
   ORDER: '/api/order',
-};
+}
 
 // statusCodes.ts
 export const STATUS_CODES = {
@@ -24,5 +24,5 @@ export const STATUS_CODES = {
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
   NOT_FOUND: 404,
-};
+}
 ```

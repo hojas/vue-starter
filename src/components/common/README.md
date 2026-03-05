@@ -18,20 +18,20 @@
 
 ```vue
 <!-- Button.vue -->
-<template>
-  <button class="btn" :class="{ 'btn-primary': variant === 'primary' }">
-    <slot></slot>
-  </button>
-</template>
-
 <script setup lang="ts">
 defineProps({
   variant: {
     type: String,
     default: 'default'
   }
-});
+})
 </script>
+
+<template>
+  <button class="btn" :class="{ 'btn-primary': variant === 'primary' }">
+    <slot />
+  </button>
+</template>
 
 <style scoped>
 .btn {

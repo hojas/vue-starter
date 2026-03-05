@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import mdx from '@mdx-js/rollup'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -28,7 +29,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      port: parseInt(env.VITE_PORT || '3000'),
+      port: Number.parseInt(env.VITE_PORT || '3000'),
       open: true,
       host: true,
     },

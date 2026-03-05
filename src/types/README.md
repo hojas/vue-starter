@@ -12,10 +12,10 @@
 ```typescript
 // user.ts
 export interface User {
-  id: number;
-  name: string;
-  email: string;
-  role: UserRole;
+  id: number
+  name: string
+  email: string
+  role: UserRole
 }
 
 export enum UserRole {
@@ -26,18 +26,18 @@ export enum UserRole {
 
 // product.ts
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
+  id: number
+  name: string
+  price: number
+  description: string
+  category: string
 }
 
 // api.ts
 export interface ApiResponse<T> {
-  success: boolean;
-  data: T;
-  message?: string;
-  error?: string;
+  success: boolean
+  data: T
+  message?: string
+  error?: string
 }
 ```

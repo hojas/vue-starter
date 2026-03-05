@@ -11,15 +11,15 @@
 
 ```typescript
 // apiService.ts
-import API_CONFIG from '../config/api';
+import API_CONFIG from '../config/api'
 
 export class ApiService {
   static async get<T>(endpoint: string): Promise<T> {
-    const response = await fetch(`${API_CONFIG.baseUrl}${endpoint}`);
+    const response = await fetch(`${API_CONFIG.baseUrl}${endpoint}`)
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      throw new Error(`API error: ${response.status}`)
     }
-    return response.json();
+    return response.json()
   }
 
   static async post<T>(endpoint: string, data: any): Promise<T> {
@@ -29,22 +29,22 @@ export class ApiService {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    });
+    })
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      throw new Error(`API error: ${response.status}`)
     }
-    return response.json();
+    return response.json()
   }
 }
 
 // userService.ts
 export class UserService {
   static async getUser(id: number) {
-    return ApiService.get(`/user/${id}`);
+    return ApiService.get(`/user/${id}`)
   }
 
   static async createUser(userData: any) {
-    return ApiService.post('/user', userData);
+    return ApiService.post('/user', userData)
   }
 }
 ```

@@ -18,23 +18,23 @@
 
 ```vue
 <!-- Layout.vue -->
-<template>
-  <div class="layout">
-    <header class="layout-header">
-      <slot name="header"></slot>
-    </header>
-    <main class="layout-main">
-      <slot></slot>
-    </main>
-    <footer class="layout-footer">
-      <slot name="footer"></slot>
-    </footer>
-  </div>
-</template>
-
 <script setup lang="ts">
 // Layout component
 </script>
+
+<template>
+  <div class="layout">
+    <header class="layout-header">
+      <slot name="header" />
+    </header>
+    <main class="layout-main">
+      <slot />
+    </main>
+    <footer class="layout-footer">
+      <slot name="footer" />
+    </footer>
+  </div>
+</template>
 
 <style scoped>
 .layout {
